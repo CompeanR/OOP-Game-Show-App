@@ -67,7 +67,15 @@ class Game {
      */
     checkForWin() {
         const blockText = document.querySelectorAll('#phrase ul li');
-      
+        
+        // blockText.forEach((li, i) => {
+        //     if (blockText[i].className === 'show') {
+        //         return true
+        //     } else {
+        //         return false
+        //     };
+        // });
+
         for ( let i = 0; i < blockText.length; i++) {
             if (blockText[i].className === 'show') {
                 return true
@@ -83,14 +91,31 @@ class Game {
      * Checks if player has remaining lives and ends game if player is out
      */
     removeLife() {
-
+        const heart = document.querySelectorAll('.tries img');
+        
+        if (this.missed < heart.length) {
+            heart[this.missed].src = 'images/lostHeart.png'
+        };
+        
+        this.missed += 1
     };
 
     /**
      * Displays game over message
-     * @param {boolean} gameWon - Wheter or not the user won the game
+     * @param {boolean} gameWon - Whether or not the user won the game
      */
     gameOver(gameWon) {
+        const overlay = document.querySelector('#overlay');
+        const h1 = document.querySelector('#overlay h1');
 
+        if (!gameWon) {
+            overlay.className = 'lose'
+            overlay.style.display = 'block'
+            h1.innerHTML = 'Sorry, better luck next time!'
+        } else {
+            overlay.className = 'win';
+            overlay.style.display = 'block';
+            h1.innerHTML = 'Great job!';
+        };
     };
 };
