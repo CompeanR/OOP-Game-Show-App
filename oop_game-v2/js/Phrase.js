@@ -1,7 +1,6 @@
-/* Treehouse FSJS Techdegree
- * Project 4 - OOP Game App
- * Phrase.js */
-
+/**
+ * The class phrase manage our random phrase in the DOM.
+ */
 class Phrase {
     constructor(phrase) {
         this.phrase = phrase.toLowerCase();
@@ -14,15 +13,15 @@ class Phrase {
         const phraseDOM = document.querySelector('#phrase ul');
         
         this.phrase.split('').forEach(word => {
-            let li = document.createElement('li')
+            let li = document.createElement('li');
             
             if (word === ' ') {
-                word = 'space'
-                li.className = `hide ${word}`
-                li.innerHTML = ` `
+                word = 'space';
+                li.className = `hide ${word}`;
+                li.innerHTML = ` `;
             } else {
-                li.className = `hide letter ${word}`
-                li.innerHTML = `${word}`
+                li.className = `hide letter ${word}`;
+                li.innerHTML = `${word}`;
             };
 
             phraseDOM.appendChild(li);
@@ -34,7 +33,7 @@ class Phrase {
      * @param (string) letter - Letter to check
      */
     checkLetter(letter) {
-        return game.activePhrase.phrase.includes(letter)
+        return game.activePhrase.phrase.includes(letter);
     };
 
     /**
@@ -42,7 +41,7 @@ class Phrase {
      * @param (string) letter - Letter to display
      */
     showMatchedLetter(letter) {
-        const blockText = document.querySelectorAll('#phrase ul li')
+        const blockText = document.querySelectorAll('#phrase ul li');
         
         game.activePhrase.phrase.split('').forEach((word, index) => {
             if (game.activePhrase.checkLetter(letter) && blockText[index].textContent === letter) {
