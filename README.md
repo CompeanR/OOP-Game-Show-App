@@ -19,7 +19,7 @@ This is a phrase hunter game that can be useful to joy for a time.
 - Html
 - Css
 
-[Back To The Top](#OOP-Game-App)
+[Back To The Top](#oop-game-show-app)
 
 ---
 
@@ -58,4 +58,4 @@ This is a phrase hunter game that can be useful to joy for a time.
 
 - Twitter - [@JCompeann](https://twitter.com/JCompeann)
 
-[Back To The Top](#read-me-template)
+[Back To The Top](#oop-game-show-app)
