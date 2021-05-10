@@ -21,24 +21,6 @@ class Game {
             new Phrase ('Keep going')
         ];
 
-        // const phrases = [
-        //     {
-        //         phrase: 'God is good all the time'
-        //     },
-        //     {
-        //         phrase: 'Keep calm and stack overflow'
-        //     },
-        //     {
-        //         phrase: 'Our habits define us'
-        //     },
-        //     {
-        //         phrase: 'Just do it'
-        //     },
-        //     {
-        //         phrase: 'Keep going'
-        //     }
-        // ];
-        
         return phraseObject;
     };
 
@@ -62,16 +44,10 @@ class Game {
     };
 
     /**
-     * Method to handle the other methods.
+     * Method to handle all our methods.
      */
     handleInteraction(button) {
-        // const ulPhrase = document.querySelector('#phrase ul');
-        // let ulPhraseChild = document.querySelector('#phrase ul li');
-        
-        // const qwerty = document.querySelectorAll('#qwerty .keyrow button');
         button.disabled = true;
-
-        // const hearts = document.querySelectorAll('.tries img');
 
         if (!game.activePhrase.checkLetter(button.textContent)) {
             button.className = 'wrong';
@@ -82,37 +58,6 @@ class Game {
         };
 
         game.resetPage(button);
-
-        // if (game.checkForWin()) {
-        //     game.gameOver(true);
-        //     qwerty.forEach(button => {
-        //         button.className = 'key';
-        //         button.disabled = false;
-        //     });
-        //     hearts.forEach(heart => heart.src = 'images/liveHeart.png');
-
-        //     for (const li in ulPhrase) {
-        //         while (ulPhraseChild) {
-        //             ulPhrase.removeChild(ulPhraseChild);
-        //             ulPhraseChild = document.querySelector('#phrase ul li');
-        //         };
-        //     };
-
-        // } else if (this.missed === 5) {
-        //     game.gameOver(false);
-        //     qwerty.forEach(button => {
-        //         button.className = 'key';
-        //         button.disabled = false;
-        //     });
-        //     hearts.forEach(heart => heart.src = 'images/liveHeart.png');
-            
-        //     for (const li in ulPhrase) {
-        //         while (ulPhraseChild) {
-        //             ulPhrase.removeChild(ulPhraseChild);
-        //             ulPhraseChild = document.querySelector('#phrase ul li');
-        //         };
-        //     };
-        // };
     };
 
     /**
@@ -172,9 +117,9 @@ class Game {
      * lost or win is clicked.
      */
     resetPage(letter) {
-        const ulPhrase = document.querySelector('#phrase ul');
         let ulPhraseChild = document.querySelector('#phrase ul li');
-        
+
+        const ulPhrase = document.querySelector('#phrase ul');
         const qwerty = document.querySelectorAll('#qwerty .keyrow button');
         const hearts = document.querySelectorAll('.tries img');
 
@@ -209,21 +154,5 @@ class Game {
                 };
             };
         };
-
-        // else if (this.missed === 5) {
-        //     game.gameOver(false);
-        //     qwerty.forEach(button => {
-        //         button.className = 'key';
-        //         button.disabled = false;
-        //     });
-        //     hearts.forEach(heart => heart.src = 'images/liveHeart.png');
-            
-        //     for (const li in ulPhrase) {
-        //         while (ulPhraseChild) {
-        //             ulPhrase.removeChild(ulPhraseChild);
-        //             ulPhraseChild = document.querySelector('#phrase ul li');
-        //         };
-        //     };
-        // };
     };
 };
