@@ -1,4 +1,4 @@
-# Interactive Form
+# OOP Game Show App
 
 ### Table of Contents
 You're sections headers will be used to reference location of destination.
@@ -19,7 +19,7 @@ This is a phrase hunter game that can be useful to joy for a time.
 - Html
 - Css
 
-[Back To The Top](#read-me-template)
+[Back To The Top](#OOP-Game-App)
 
 ---
 
